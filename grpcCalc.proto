@@ -1,0 +1,40 @@
+
+syntax = "proto3";
+
+package ppd;
+
+service MinerService {
+  rpc GetTransactionID(Empty) returns (TransactionIDResponse);
+  rpc GetChallenge(TransactionIDRequest) returns (ChallengeResponse);
+  rpc GetTransactionStatus(TransactionIDRequest) returns (TransactionStatusResponse);
+  rpc SubmitChallenge(SubmitChallengeRequest) returns (SubmitChallengeResponse);
+  rpc GetWinner(TransactionIDRequest) returns (WinnerResponse);
+  rpc GetSolution(TransactionIDRequest) returns (SolutionResponse);
+}
+
+message Empty {}
+
+message TransactionIDRequest { int32 transaction_id = 1; }
+
+message TransactionIDResponse { int32 transaction_id = 1; }
+
+message ChallengeResponse { int32 challenge = 1; }
+
+message TransactionStatusResponse { int32 status = 1; }
+
+message SubmitChallengeRequest {
+  int32 transaction_id = 1;
+  int32 client_id = 2;
+  string solution = 3;
+}
+
+message SubmitChallengeResponse { int32 result = 1; }
+// 1=valid, 0=invalid, 2=already solved, -1=invalid transaction
+
+message WinnerResponse { int32 client_id = 1; } // 0=no winner yet, -1=invalid transaction
+
+message SolutionResponse {
+  int32 status = 1; // same semantics as TransactionStatusResponse
+  string solution = 2;
+  int32 challenge = 3;
+}
