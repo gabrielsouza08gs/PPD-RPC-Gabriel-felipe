@@ -3,8 +3,8 @@ PPD – Projeto RPC Miner (gRPC em Python)
 Disciplina: Programação Paralela e Distribuída
 Professor: Breno Krohling
 Curso: Engenharia da Computação — Multivix
-Alunos:
 
+Alunos:
 Gabriel Souza do Nascimento — 1-2215114
 Felipe Colloddetti Ramos — 1-2212294
 
