@@ -94,7 +94,7 @@ Sincronização entre múltiplos clientes;
 
 Impacto do paralelismo local (threads) no tempo de execução.
 
-6. Conclusões
+6. Conclusão
 
 O projeto cumpriu seu objetivo de implementar um sistema distribuído funcional usando RPC com gRPC, mostrando na prática a comunicação entre processos, concorrência e validação de resultados de forma síncrona e escalável.
 
