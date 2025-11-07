@@ -72,6 +72,7 @@ Exemplo de execução:
 [mine] local solution: client1:tid2:9176, sha1=000978f3c6c42f987864d0e3bf44f7124d8850a
 [mine] server response result=1 (valid)
 
+
 Observações:
 
 Cada cliente que encontra a solução válida é registrado como vencedor.
@@ -80,6 +81,7 @@ Clientes que tentam submeter após a resolução recebem result=2 (already solve
 
 O servidor automaticamente gera a próxima transação após cada desafio concluído.
 
+ 
  5. Discussão
 
 O experimento demonstrou de forma prática o conceito de RPC e sincronização entre processos distribuídos.
@@ -92,7 +94,7 @@ Sincronização entre múltiplos clientes;
 
 Impacto do paralelismo local (threads) no tempo de execução.
 
- 6. Conclusões
+6. Conclusões
 
 O projeto cumpriu seu objetivo de implementar um sistema distribuído funcional usando RPC com gRPC, mostrando na prática a comunicação entre processos, concorrência e validação de resultados de forma síncrona e escalável.
 
@@ -104,7 +106,8 @@ Armazenamento dos resultados em banco de dados;
 
 Ajuste dinâmico de dificuldade conforme taxa de soluções.
 
- 7. Execução do Projeto
+
+7. Execução do Projeto
 Requisitos:
 
 Python 3.10 ou superior
