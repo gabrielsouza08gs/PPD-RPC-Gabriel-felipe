@@ -52,7 +52,8 @@ O cliente solicita o desafio, gera hashes (SHA-1) de forma concorrente e tenta e
 
 Ao encontrar uma solução válida, o cliente envia via RPC e o servidor registra o vencedor, abrindo automaticamente a próxima transação.
 
-🔬 3. Implementação
+
+3. Implementação
 
 O servidor foi desenvolvido com ThreadPoolExecutor para permitir múltiplas conexões simultâneas.
 O controle de concorrência e integridade das transações é feito por threading.Lock, evitando condições de corrida durante a validação das soluções.
