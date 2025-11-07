@@ -1,0 +1,28 @@
+
+syntax = "proto3";
+
+package ppd;
+
+enum Op {
+  OP_UNSPEC = 0;
+  ADD = 1;
+  SUB = 2;
+  MUL = 3;
+  DIV = 4;
+}
+
+service CalcService {
+  rpc Compute(ComputeRequest) returns (ComputeResponse);
+}
+
+message ComputeRequest {
+  Op op = 1;
+  double a = 2;
+  double b = 3;
+}
+
+message ComputeResponse {
+  double result = 1;
+  int32 err = 2;
+  string err_msg = 3;
+}
