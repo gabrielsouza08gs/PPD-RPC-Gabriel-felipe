@@ -5,7 +5,7 @@ Alunos:
 
 Gabriel Souza do Nascimento — 1-2215114
 
-Felipe Collodetti Ramos — 1-2212294
+
 
 1. Introdução
 
